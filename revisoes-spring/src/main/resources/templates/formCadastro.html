@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>FORMULÁRIO DE CADASTRO</title>
+</head>
+<body>
+     <form th:action="@{/cliente}" th:object="${cliente}" method="post">
+        <label th:form="id">ID</label>
+        <input  type="number" th:field="*{id}" required="required"/></br>
+        <label th:form="nome">NOME</label>
+        <input  type="text" th:field="*{nome}" required="required"/></br>
+        <label th:form="cpf">CPF</label>
+        <input type="text" th:field="*{cpf}" required="required"/></br>
+        <input type="submit"/>
+     </form>
+</body>
+</html>
