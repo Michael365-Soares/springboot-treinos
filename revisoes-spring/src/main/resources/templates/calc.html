@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CALCULADORA</title>
+</head>
+<body>
+      <form th:action="@{/calc/calculo}" th:object="${calc}" method="post">
+         <label th:form="a">Nº1</label>
+         <input type="number" th:field="*{a}" required="required"/></br>
+         <label th:form="b">Nº2</label>
+         <input type="number" th:field="*{b}" required="required"/></br>
+         <label th:form="op">OPERADOR +/-</label>
+         <input type="text" th:field="*{op}" required="required"/></br>
+         <input type="submit"/>
+      </form>
+</body>
+</html>

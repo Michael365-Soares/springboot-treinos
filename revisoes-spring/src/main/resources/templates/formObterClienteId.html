@@ -5,7 +5,7 @@
 <title>Obter Cliente Por ID</title>
 </head>
 <body>
-      <form th:action="@{/cliente/obterCliente2}" th:object="${cliente}" method="post">
+      <form th:action="@{/calc/obterCliente2}" th:object="${cliente}" method="post">
            <h1>Obtendo Cliente por id<h1/>
            <label th:form="id">ID:</label><input type="number" th:field="*{id}" required="required"/>
            <input type="submit"/>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Pesquisar por Intervalo de Preço</title>
+</head>
+<body>
+      <form th:action="@{/produtos/intervaloDePreco}" method="post">
+        <label>PREÇO INICIAL</label>
+        <input  type="number" name="inicial" required="required"/></br>
+        <label>PREÇO FINAL</label>
+        <input type="number" name="fim" required="required"/></br>
+        <input type="submit"/>
+     </form>
+</body>
+</html>
