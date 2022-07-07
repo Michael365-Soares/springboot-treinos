@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Exclusão de Produto Por Id</title>
+</head>
+<body>
+      <form th:action="@{/produtos/excluirPorId}" method="post">
+        <label th:form="nome">EXCLUIR ID:</label>
+        <input  type="number" name="id" required="required"/></br>
+        <input type="submit"/>
+     </form>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Alteração de Produto</title>
+</head>
+<body>
+     <form th:action="@{/produtos/prodAtualizado}"  method="post">
+        <label>ID</label>
+        <input  type="number" name="id" required="required"/></br>
+        <label>NOME</label>
+        <input  type="text" name="nome" required="required"/></br>
+        <label>PREÇO</label>
+        <input type="number" name="preco" required="required"/></br>
+        <label th:form="preco">DESCONTO</label>
+        <input type="number" name="desconto" required="required"/></br>
+        <input type="submit"/>
+     </form>
+</body>
+</html>

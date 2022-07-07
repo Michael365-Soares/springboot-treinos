@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>PESQUISAR POR ID</title>
+	</head>
+<body>
+     <form th:action="@{/produtos/resultPesquisaId}" method="post">
+        <label th:form="nome">PESQUISAR ID:</label>
+        <input  type="number" name="id" required="required"/></br>
+        <input type="submit"/>
+     </form>
+</body>
+</html>

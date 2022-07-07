@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Produto Atualizado com sucesso</title>
+	<style>
+	    table, th ,td{
+	      border:2px groove black;
+	      margin:100px 250px 100px 250px;
+	      height:20px;
+	      width:20px
+	    }
+	</style>
+</head>
+<body>
+     <table>
+           <tr style="border:2px solid black">
+              <th>NOME</th>
+              <th>PREÇO</th>
+              <th>DESCONTO</th>
+              <th>ID</th>
+           </tr>
+           <tr>
+             <td><b th:text="${produto.nome}" /></td>
+             <td><b th:text="${produto.preco}" /></td>
+             <td><b th:text="${produto.desconto}" /></td>
+             <td><b th:text="${produto.id}" /></td>
+           </tr>
+      </table>
+</body>
+</html>
