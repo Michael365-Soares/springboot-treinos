@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -50,9 +51,9 @@ public class ProdutoController {
     	return new ModelAndView("produto/produtoCadastrado2");
     }
     	
-    @GetMapping("/consultaPaginada")
-    public ModelAndView consultaPaginada(ModelMap model){
-    	Pageable page=PageRequest.ofSize(10);
+    @GetMapping("/consultaPaginada/{numPag}")
+    public ModelAndView consultaPaginada(ModelMap model,@PathVariable int numPag){
+    	Pageable page=PageRequest.of(numPag,2);
     	Iterable<Produto> produtos=produtoRepository.findAll(page);
     	model.addAttribute("produtos",produtos);
     	return new ModelAndView("produto/resultPaginado");
@@ -93,6 +94,12 @@ public class ProdutoController {
     	Iterable<Produto> produtos=produtoRepository.findAll(page);
     	model.addAttribute("produtos",produtos);
     	return new ModelAndView("produto/resultPaginado");
+    }
+    
+    @GetMapping("/consultaPorNome/{nome}")
+    public List<Produto> consultarPorNome(@PathVariable String nome){
+    	List<Produto> lista=produtoRepository.findByNomeContainingIgnoreCase(nome);
+    	return lista;
     }
     
 }
